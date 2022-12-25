@@ -15,10 +15,9 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-  }
-  
+}
 
 canvas {
     width: 50%;
-    background-color:#A1BBC8;
+    background-color:#B0C6D0;
 }

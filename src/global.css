@@ -1,13 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
 *{
     padding: 0;
     margin: 0;
     cursor: pointer;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 #root {
@@ -16,6 +15,29 @@
     padding: 0;
     height: 100vh;
 }
+
+.cyber-text {
+    position: relative;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+.cyber-text:before {
+    position: absolute;
+    content: 'Anton.';
+    color: #49a7ffcc;
+    top: 5px;
+    left: 10px;
+}
+.cyber-text:after {
+    z-index: -1;
+    position: absolute;
+    content: 'Anton.';
+    color: #ff3838cc;
+    top: -5px;
+    left: 8px;
+}
+
+
 
 canvas {
     width: 50%;

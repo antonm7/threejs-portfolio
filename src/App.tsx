@@ -20,14 +20,16 @@ function App() {
   return (
     <div className="flex relative h-screen">
       <div ref={titlesRef} className="absolute z-50 w-[45%] py-32  pl-16">
-        <h1 className="text-[#091434] tracking-tight leading-tight text-[3.9vw] font-semibold">
-          My name is Anton <br />
-          I'm a Frontend Developer
+        <h1 className="cyber-text text-4xl">
+          Anton.
+        </h1>
+        <h1 className=" text-[#ff3838cc] tracking-tight leading-tight text-[4.7vw] font-semibold">
+          I'm a Frontend<br /> Developer
         </h1>
         <div className="pt-4">
-          <h1 className="text-[2.4vw] font-semibold text-[#091434] inline-block">- my work</h1><br />
-          <h1 onClick={() => onSkills()} className="text-[2.4vw] font-semibold text-[#091434] inline-block">- my skills</h1><br />
-          <h1 className="text-[2.4vw] font-semibold text-[#091434] inline-block">- contact me</h1>
+          <h1 className="text-[2.4vw] font-semibold text-white inline-block">my_work</h1><br />
+          <h1 onClick={() => onSkills()} className="text-[2.4vw] font-semibold text-white inline-block">my_skills</h1><br />
+          <h1 className="text-[2.4vw] font-semibold text-white inline-block">contact_me</h1>
         </div>
         </div>
           <Canvas shadows camera={{

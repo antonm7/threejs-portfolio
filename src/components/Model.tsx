@@ -25,7 +25,7 @@ export default function Model({skills}:any) {
 
     return (
         <>
-             <Stats />
+            <Stats />
             <ambientLight  color={'white'} intensity={0.5}/>
             <PresentationControls  
                 polar={[-Math.PI / 1000, Math.PI / 1000]} 

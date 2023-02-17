@@ -1,6 +1,5 @@
-import { Html } from "@react-three/drei"
-import { Canvas, useFrame } from "@react-three/fiber"
-import { Suspense, useRef, useState } from "react"
+import { Canvas } from "@react-three/fiber"
+import { useRef, useState } from "react"
 import Model from "./components/Model"
 import gsap from "gsap"
 
@@ -18,7 +17,7 @@ function App() {
   }
 
   return (
-    <div className="flex relative h-screen">
+    <div className="relative h-screen">
       <div ref={titlesRef} className="absolute z-50 w-[45%] py-32  pl-16">
         <h1 className="cyber-text text-4xl">
           Anton.
@@ -39,6 +38,9 @@ function App() {
           }}>
         <Model skills={skills}/>
       </Canvas>
+      <div>
+        jdksaljdskla
+      </div>
     
   </div>
   

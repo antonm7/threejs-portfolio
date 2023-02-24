@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -32,12 +33,9 @@
     z-index: -1;
     position: absolute;
     content: 'Anton.';
-    color: #ff3838cc;
     top: -5px;
     left: 8px;
 }
-
-
 
 canvas {
     width: 50%;

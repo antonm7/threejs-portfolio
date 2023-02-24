@@ -1,6 +1,5 @@
-import { Html } from "@react-three/drei"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Suspense, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import Model from "./components/Model"
 import gsap from "gsap"
 

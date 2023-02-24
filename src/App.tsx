@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div className="flex relative h-screen">
+    <div className="relative h-screen">
       <div ref={titlesRef} className="absolute z-50 w-[45%] py-32  pl-16">
         <h1 className="cyber-text text-4xl">
           Anton.
@@ -38,6 +38,9 @@ function App() {
           }}>
         <Model skills={skills}/>
       </Canvas>
+      <div>
+        jdksaljdskla
+      </div>
     
   </div>
   

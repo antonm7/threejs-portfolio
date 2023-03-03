@@ -28,7 +28,6 @@ function App() {
         <div className="pt-4">
           <h1 className="text-[2.4vw] font-semibold text-white inline-block">my_work</h1><br />
           <h1 onClick={() => onSkills()} className="text-[2.4vw] font-semibold text-white inline-block">my_skills</h1><br />
-          <h1 className="text-[2.4vw] font-semibold text-white inline-block">contact_me</h1>
         </div>
         </div>
           <Canvas shadows camera={{
@@ -38,10 +37,6 @@ function App() {
           }}>
         <Model skills={skills}/>
       </Canvas>
-      <div>
-        jdksaljdskla
-      </div>
-    
   </div>
   
   )

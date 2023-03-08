@@ -4,24 +4,9 @@ import { useRef } from 'react'
 import Setup from './Setup'
 import gsap from 'gsap'
 
-export default function Model({skills}:any) {
+export default function Model() {
     const lightRef = useRef<any>(null)
     const modelRef = useRef<any>(null)
-    
-    useFrame(({camera}) => {
-        if(skills) {
-            const tl = gsap.timeline()
-            tl.to(camera.position,{
-                x:2.1,
-                y:1,
-                z:-4.2
-            }).to(camera.rotation, {
-                x:0,
-                y:-0.07,
-                z:0,
-            },'<')
-        }
-    })
 
     return (
         <>

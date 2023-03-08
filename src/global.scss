@@ -1,13 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
+
+@font-face {
+    font-family: SF Pro Display;
+    src: url('../public/fonts/bold.otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SF Pro Display;
+    src: url('../public/fonts/regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    src: url('../public/fonts/medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Integral CF;
+    src: url('../public/fonts/IntegralCF-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Integral CF;
+    src: url('../public/fonts/IntegralCF-Medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Integral CF;
+    src: url('../public/fonts/IntegralCF-Bold.otf');
+    font-weight: 700;
+}
+
 
 *{
     padding: 0;
     margin: 0;
     cursor: pointer;
-    font-family: 'Playfair Display', serif;
+    font-family: SF Pro Display;
 }
 
 #root {

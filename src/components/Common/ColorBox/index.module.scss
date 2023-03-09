@@ -1,0 +1,36 @@
+#wrapper {
+    position: relative;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.08;
+        z-index: 1;
+        pointer-events: none;
+        border-radius: 1.5rem;
+    }
+}
+
+.purple {
+    &::before {
+        background-color: #5F55D2;
+    }
+}
+
+.pink {
+    &::before {
+        background-color: #EF4D83;
+    }
+}
+
+.orange {
+    &::before {
+        background-color: #DD9516;
+    }
+}

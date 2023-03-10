@@ -14,8 +14,7 @@ const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
-
+    slidesToScroll: 1
 };
 
 const visibleReducer = (state:any, action: { type: 'landingPages' | 'fullstack' | 'backend'; }) => {
@@ -40,26 +39,25 @@ export default function Portfolio() {
         slickSlider?.current?.slickGoTo(0)
     },[visible.visible])
 
-
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/')} icon={faArrowLeft} className="z-50 w-6 h-6"/>
             <h1 className="text-black font-integral font-black text-[55px]">MY PORTFOLIO</h1>
             <p className="max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">Some works I have built includes landing pages, fullstack websites and backend code.</p>
             <div className="flex flex-wrap pt-10">
-                <button onClick={() => setVisible({type:'landingPages'})} className="mb-3 mr-3 max-w-80 w-80 h-24 flex justify-center items-center bg-white rounded-lg font-display font-bold text-3xl">
+                <button onClick={() => setVisible({type:'landingPages'})} className="mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
                     <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'landingPages' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {visible.visible === 'landingPages' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     Landing Pages
                 </button>
-                <button onClick={() => setVisible({type:'fullstack'})} className="px-6 max-w-96 h-24 flex justify-center items-center bg-white rounded-lg font-display font-bold text-3xl">
+                <button onClick={() => setVisible({type:'fullstack'})} className="mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
                     <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {visible.visible === 'fullstack' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     FullStack Websites
                 </button>
-                <button onClick={() => setVisible({type:'backend'})} className="max-w-80 w-80 h-24 flex justify-center items-center bg-white rounded-lg font-display font-bold text-3xl">
+                <button onClick={() => setVisible({type:'backend'})} className="mb-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
                     <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'backend' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {visible.visible === 'backend' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>

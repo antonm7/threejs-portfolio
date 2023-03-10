@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex-col pt-16" id={styles.hi_titles_wrapper}>
             <div className="flex items-start flex-nowrap">
               <h1 className="font-integral font-bold text-5xl">
-                👋HI! I'M  
+                👋 HI! I'M  
               </h1>
               <div className="flex flex-nowrap bg-mainPurple ml-5 mt-[-0.8rem] rounded-2xl w-[230px] h-[84px] relative">
                 <img src={A_white} className="h-9 pr-[3px] absolute" id={styles.a_white}/>

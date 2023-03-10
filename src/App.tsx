@@ -12,6 +12,7 @@ import Poetry from "./components/Sections/Work/Poetry";
 import Magic from "./components/Sections/Work/Magic";
 import Landify from "./components/Sections/Work/Landify";
 import Keeper from "./components/Sections/Work/Keeper";
+import GameFevr from "./components/Sections/Work/GameFevr";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/project/magicEditor" element={<Magic />} />
           <Route path="/project/landify" element={<Landify />} />
           <Route path="/project/keeper" element={<Keeper />} />
+          <Route path="/project/gameFevr" element={<GameFevr />} />
         </Routes>
       </BrowserRouter>
       <Canvas shadows camera={{

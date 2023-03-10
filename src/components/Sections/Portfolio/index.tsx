@@ -76,7 +76,7 @@ export default function Portfolio() {
                     </Slider> :
                     visible.visible === 'fullstack' ? 
                     <Slider ref={slickSlider} {...settings}>
-                       
+                        <Project to="gameFevr" title="GameFavr Website" img="/projects/gameFevr.png"/>
                     </Slider> :
                     <Slider ref={slickSlider} {...settings}>
                        

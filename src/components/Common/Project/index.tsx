@@ -15,7 +15,7 @@ export default function Project({img,title,to}:Props) {
     }
 
     return (
-        <div className={`${styles.wrapper} relative flex justify-between items-end pb-12 px-7 w-full rounded-2xl h-[480px]`} style={{backgroundImage:`url(${img})`}}>
+        <div className={`${styles.wrapper} relative flex justify-between items-end pb-9 px-7 w-full rounded-2xl h-[480px]`} style={{backgroundImage:`url(${img})`}}>
             <p className='font-display font-medium text-xl underline text-white'>{title}</p>
             <ArrowLink method={() => navigateMethod()} />
         </div>

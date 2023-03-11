@@ -77,12 +77,12 @@ export default function Portfolio() {
                         <Project to="gameFevr" title="GameFavr Website" img="/projects/gameFevr.png"/>
                     </Slider> :
                     <Slider ref={slickSlider} {...settings}>
-                       
+                        <Project to="auth" title="Refresh Tokens Authentication Article" img="/projects/auth.png"/>
                     </Slider>
                 }
                 <div className="flex justify-center mt-4">
-                    <img src={left} className='h-12 mr-2'/>
-                    <img src={right} className='h-12'/>
+                    <img src={left} onClick={() => slickSlider.current.slickPrev()} className='h-12 mr-2'/>
+                    <img src={right} onClick={() => slickSlider.current.slickNext()}  className='h-12'/>
                 </div>
             </div>
         </Layout>

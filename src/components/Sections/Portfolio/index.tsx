@@ -7,6 +7,7 @@ import right from '/assets/general/right.png';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
+import { useStore } from "../../../store";
 
 const settings = {
     dots: false,
@@ -34,6 +35,7 @@ export default function Portfolio() {
     const [visible, setVisible] = useReducer(visibleReducer, {visible:'landingPages'})
     const navigate = useNavigate()
     const slickSlider = useRef<any>(null)
+    const store = useStore(state => state)
 
     useEffect(() => {
         slickSlider?.current?.slickGoTo(0)
@@ -45,34 +47,34 @@ export default function Portfolio() {
             <h1 className="text-black font-integral font-black text-[55px]">MY PORTFOLIO</h1>
             <p className="max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">Some works I have built includes landing pages, fullstack websites and backend code.</p>
             <div className="flex flex-wrap pt-10">
-                <button onClick={() => setVisible({type:'landingPages'})} className="mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'landingPages' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
-                        {visible.visible === 'landingPages' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
+                <button onClick={() => store.setSection('landing')} className="mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
+                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'landing' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                        {store.section === 'landing' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     Landing Pages
                 </button>
-                <button onClick={() => setVisible({type:'fullstack'})} className="mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
-                        {visible.visible === 'fullstack' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
+                <button onClick={() => store.setSection('fullstack')} className="mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
+                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                        {store.section === 'fullstack' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     FullStack Websites
                 </button>
-                <button onClick={() => setVisible({type:'backend'})} className="mb-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${visible.visible === 'backend' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
-                        {visible.visible === 'backend' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
+                <button onClick={() => store.setSection('backend')} className="mb-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
+                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'backend' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                        {store.section === 'backend' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     Backend Code
                 </button>
             </div>
             <div className="pt-14 relative z-50">
-                {visible.visible === 'landingPages' ?
+                {store.section === 'landing' ?
                     <Slider {...settings} ref={slickSlider}>
                         <Project to="poetry" title="Poetry Landing Page" img="/projects/poetry.png"/>
                         <Project to="landify" title="Poetry Landing Page" img="/projects/landify.png"/>
                         <Project to="magicEditor" title="Poetry Landing Page" img="/projects/magic.png"/>
                         <Project to="keeper" title="Poetry Landing Page" img="/projects/keeper.png"/>
                     </Slider> :
-                    visible.visible === 'fullstack' ? 
+                    store.section === 'fullstack' ? 
                     <Slider ref={slickSlider} {...settings}>
                         <Project to="gameFevr" title="GameFavr Website" img="/projects/gameFevr.png"/>
                     </Slider> :

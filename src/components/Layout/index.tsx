@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import styles from './index.module.scss'
 import {motion} from 'framer-motion'
 

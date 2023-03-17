@@ -1,10 +1,11 @@
 @import '../../../global.scss';
 
 #purple_wrapper {
-    width: 11.9rem;
-    height: 4rem;
+    min-width: 11.8rem;
     @include for-size(tablet-portrait) {
-        margin-top: -0.5rem;
+        height: 4.9rem;
+        width: 10rem;
+        margin-top: -1rem;
     }
 }
 

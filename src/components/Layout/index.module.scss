@@ -19,9 +19,9 @@
         opacity: 0.15;
         z-index: 1;
         pointer-events: none;
-    }
-    @include for-size(tablet-portrait) {
-       height: min-content;
+        @include for-size(tablet-portrait) {
+            background-position: top left;
+        }
     }
 }
 #width_container {
@@ -32,6 +32,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 95vw;
+        overflow-y: auto;
     }
     
 }

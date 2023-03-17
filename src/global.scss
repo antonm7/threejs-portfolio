@@ -101,6 +101,12 @@ canvas {
     }
 }
 
+.responsive_subTitle {
+    @include for-size(tablet-portrait) {
+        font-size: 2rem;
+    }
+}
+
 .responsive_para {
     @include for-size(tablet-portrait) {
         font-size: 1.4rem;

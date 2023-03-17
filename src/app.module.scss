@@ -2,7 +2,7 @@
 
 #canvas {
     @include for-size(tablet-portrait) {
-        height: 100rem !important;
+        min-height: 100rem !important;
         overflow: auto !important;
         padding-top: 0 !important;
         canvas {

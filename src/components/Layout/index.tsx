@@ -16,7 +16,7 @@ const Layout = ({children}:any) => {
         exit="exit"
         id={styles.width_container}
         className="absolute z-50 w-[52vw] h-full p-4" >
-            <div className="z-[0] w-full h-full rounded-3xl px-16 py-16 overflow-auto" id={styles.wrapper}>
+            <div className="z-[0] w-full h-full rounded-3xl p-16 overflow-auto" id={styles.wrapper}>
                 {children}
             </div>
         </motion.div>

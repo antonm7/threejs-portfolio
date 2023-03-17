@@ -26,7 +26,7 @@ export default function Home() {
             Im a 21 years old from Israel. <br /> Im really passionate about developing and learning 
             everything related to the world of programming.
           </p>
-          <div className="flex pt-20">
+          <div className="flex pt-20" id={styles.buttons_wrapper}>
             <FullButton onClick={() => navigate('/aboutMe')} title='About Me' marginRight={'1.5rem'}/>
             <BorderedButton onClick={() => navigate('/portfolio')} title='See Portfolio'/>
           </div>

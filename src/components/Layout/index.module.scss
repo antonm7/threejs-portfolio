@@ -2,6 +2,10 @@
 
 #wrapper {
     background-color: rgba(255, 255, 255, 0.85);
+    @include for-size(phone-only) {
+        padding: 1.5rem;
+        height: min-content;
+    }
     &::-webkit-scrollbar {
         width: 0;
     }

@@ -1,0 +1,11 @@
+@import '../../../global.scss';
+
+#wrapper {
+    @include for-size(tablet-portrait) {
+        padding: 2rem;
+        height: min-content;
+        span {
+            font-size: 1.7rem;
+        }
+    }
+}

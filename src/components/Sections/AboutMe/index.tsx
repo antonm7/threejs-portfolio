@@ -15,7 +15,18 @@ export default function AboutMe() {
                 Full-Stack Developer
             </div>
             <h2 className="pt-16 text-black font-integral  font-bold text-4xl">ABOUT ME:</h2>
-            <p className="pr-12 max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">I have a strong passion for creating  solutions to complex bugs. I have experience in a wide range of technologies, including front and back development</p>
+            <div className="pr-12 max-w-3xl text-[#323232] font-display text-2xl pt-6 leading-relaxed">
+                <p>
+                    Im a fulltack developer located in Israel. I started learning web programming about 6 years ago on my own.
+                </p>
+                <p className="pt-4">
+                    I am very organized person, problem solver, love to take challenges and
+                    love to collaborate and work with other developers.
+                </p>
+                <p className="pt-4">
+                    When I'm not sitting in front of the computer I like to travel, run in the sea or read a good book.
+                </p>
+            </div>
             <h2 className="pt-16 text-black font-integral font-bold text-4xl">SKILLS:</h2>
             <div className="flex flex-wrap pt-10">
                 <SkillBox title="Html"/>

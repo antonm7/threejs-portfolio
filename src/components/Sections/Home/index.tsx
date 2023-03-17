@@ -32,7 +32,8 @@ export default function Home() {
             </h1>
           </div>
           <p className="font-display font-normal text-3xl max-w-2xl pt-12 leading-relaxed">
-            As a developer, I have a strong passion for creating elegant and efficient solutions to complex problems, while learning in real time. I have 4 years of experience in Front and Back development.
+            Im a 21 years old from Israel. <br /> Im really passionate about developing and learning 
+            everything related to the world of programming.
           </p>
           <div className="flex pt-20">
             <FullButton onClick={() => navigate('/aboutMe')} title='About Me' marginRight={'1.5rem'}/>

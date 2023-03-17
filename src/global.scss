@@ -37,6 +37,19 @@
     font-weight: 700;
 }
 
+@mixin for-size($size) {
+    @if($size == phone-only) {
+        @media (max-width:600px) {@content;}
+    }@else if($size == tablet-portrait) {
+        @media (max-width:900px) {@content;}
+    }@else if($size == tablet-landscape) {
+        @media (max-width:1250px) {@content;}
+    }@else if($size == mid-desktop) {
+        @media (max-width:1400px) {@content;}
+    }@else if($size == bid-desktop) {
+        @media (min-width:1800px) {@content;}
+    }
+}
 
 *{
     padding: 0;
@@ -75,6 +88,22 @@
 canvas {
     width: 50%;
     background-color:#B0C6D0;
+    @include for-size(tablet-portrait) {
+        background-color:#B3C8D1;
+    }
 }
 
 .slick-slide>div {padding: 0 5px;}
+
+.responsive_title {
+    @include for-size(tablet-portrait) {
+        font-size: 2.4rem;
+    }
+}
+
+.responsive_para {
+    @include for-size(tablet-portrait) {
+        font-size: 1.4rem;
+        max-width: 33rem;
+    }
+}

@@ -15,7 +15,8 @@ const Layout = ({children}:any) => {
         initial="initial" 
         animate="animate"
         exit="exit"
-        className="absolute z-50 w-[52vw] h-full p-4 ">
+        id={styles.width_container}
+        className="absolute z-50 w-[52vw] h-full p-4" >
             <div className="z-[0] w-full h-full rounded-3xl px-16 py-16 overflow-auto" id={styles.wrapper}>
                 {children}
             </div>

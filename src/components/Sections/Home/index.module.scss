@@ -1,11 +1,29 @@
+@import '../../../global.scss';
+
+#purple_wrapper {
+    width: 11.9rem;
+    height: 4rem;
+    @include for-size(tablet-portrait) {
+        margin-top: -0.5rem;
+    }
+}
+
 #a_white {
     top: 50%;
     transform: translateY(-50%);
     left: 1rem;
+    @include for-size(tablet-portrait) {
+        top: 48%;
+        height: 1.8rem !important;
+    }
 }
 
 #nton_white {
     top: 43.5%;
     transform: translateY(-50%);
     left: 3.8rem;
+    @include for-size(tablet-portrait) {
+        top: 41.8%;
+        left: 3.2rem;
+    }
 }

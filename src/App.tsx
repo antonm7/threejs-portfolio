@@ -5,6 +5,7 @@ import {
   Route,
   Routes
 } from "react-router-dom";
+import styles from './app.module.scss';
 import Home from "./components/Sections/Home"
 import Portfolio from "./components/Sections/Portfolio";
 import AboutMe from "./components/Sections/AboutMe";
@@ -31,11 +32,11 @@ function App() {
           <Route path="/project/auth" element={<Auth />} />
         </Routes>
       </BrowserRouter>
-      <Canvas shadows camera={{
+      <Canvas id={styles.canvas} className="h-auto" shadows camera={{
           fov:45,
           near:0.1,
-          far:2000,
-        }}>
+          far:2000
+          }}>
         <Model />
       </Canvas>
     </div>

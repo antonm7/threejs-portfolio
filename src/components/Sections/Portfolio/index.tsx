@@ -18,28 +18,16 @@ const settings = {
     slidesToScroll: 1
 };
 
-const visibleReducer = (state:any, action: { type: 'landingPages' | 'fullstack' | 'backend'; }) => {
-    switch (action.type) {
-        case 'landingPages':
-            return {visible:'landingPages'}
-        case 'fullstack':
-            return {visible:'fullstack'}
-        case 'backend':
-            return {visible:'backend'}
-        default:
-            return {visible:'landingPages'}
-    }
-}
+const LANDING_LENGTH = 4
+const FULLSTACK_LENGTH = 1
+const BACKEND_LENGTH = 1
 
 export default function Portfolio() {
-    const [visible, setVisible] = useReducer(visibleReducer, {visible:'landingPages'})
+    const [current, setCurrent] = useState<number>(0)
+    
     const navigate = useNavigate()
     const slickSlider = useRef<any>(null)
     const store = useStore(state => state)
-
-    useEffect(() => {
-        slickSlider?.current?.slickGoTo(0)
-    },[visible.visible])
 
     return (
         <Layout>
@@ -68,7 +56,7 @@ export default function Portfolio() {
             </div>
             <div className="pt-14 relative z-50">
                 {store.section === 'landing' ?
-                    <Slider {...settings} ref={slickSlider}>
+                    <Slider afterChange={(i:number) => setCurrent(i)} {...settings} ref={slickSlider}>
                         <Project to="poetry" title="Poetry Landing Page" img="/projects/poetry.png"/>
                         <Project to="landify" title="Poetry Landing Page" img="/projects/landify.png"/>
                         <Project to="magicEditor" title="Poetry Landing Page" img="/projects/magic.png"/>
@@ -82,10 +70,14 @@ export default function Portfolio() {
                         <Project to="auth" title="Refresh Tokens Authentication Article" img="/projects/auth.png"/>
                     </Slider>
                 }
-                <div className="flex justify-center mt-4">
-                    <img src={left} onClick={() => slickSlider.current.slickPrev()} className='h-12 mr-2'/>
-                    <img src={right} onClick={() => slickSlider.current.slickNext()}  className='h-12'/>
-                </div>
+                {store.section === 'landing' ?
+                (
+                    <div className="flex justify-center mt-4">
+                        <img src={left} onClick={() => current === 0 ? null : slickSlider.current.slickPrev()} className={`${current === 0 ? 'opacity-30' : 'opacity-100'} h-12 mr-2`}/>
+                        <img src={right} onClick={() => current === LANDING_LENGTH - 1 ? null : slickSlider.current.slickNext()}  className={`${current === LANDING_LENGTH - 1 ? 'opacity-30' : 'opacity-100'} h-12`}/>
+                    </div>
+
+                ) : null}
             </div>
         </Layout>
     )

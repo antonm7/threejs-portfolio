@@ -6,7 +6,11 @@ import ColorBox from "../../Common/ColorBox";
 import FullButton from "../../Common/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
-
+import Login from '/projects/gameFevr/login.png';
+import Game from '/projects/gameFevr/game.png';
+import Home from '/projects/gameFevr/home.png';
+import Profile from '/projects/gameFevr/profile.png';
+ 
 export default function GameFevr() {
     const navigate = useNavigate()
     return (
@@ -41,8 +45,18 @@ export default function GameFevr() {
                 <ColorBox title={"Zustand"} color={"#5F55D2"} bgColor="purple" />
                 <ColorBox title={"Express JS"} color={"#EF4D83"} bgColor="pink" />
             </div>
-            <div className={`${styles.img} w-full h-[525px] relative z-50`} 
-            style={{backgroundImage:'url(/projects/gameFevr.png)'}}/>
+            {/* <div className={`${styles.img} w-full h-[525px] relative z-50`} 
+            style={{backgroundImage:'url(/projects/gameFevr.png)'}}/> */}
+            <div className={`w-full table ${styles.table_wrapper}`}>
+                <div className="w-2/4 float-left pr-2">
+                    <img src={Game} className="w-full"/>
+                </div>
+                <div className="w-2/4 float-right">
+                    <img src={Login} className="w-full"/>
+                    <img src={Home} className="w-full pt-4"/>
+                    <img src={Profile} className="w-full pt-4"/>
+                </div>
+            </div>
             <div className="flex justify-center pt-12">
                 <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
                 <BorderedButton onClick={() => null} title="GitHub"/>

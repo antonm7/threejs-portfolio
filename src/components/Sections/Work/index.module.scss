@@ -1,5 +1,24 @@
+@import '../../../global.scss';
+
 .img {
    background-position: top center;
    background-size: cover;
    background-repeat: no-repeat; 
+}
+
+.table_wrapper {
+   position: relative;
+   z-index: 50;
+   @include for-size(tablet-portrait) {
+      display: flex !important;
+      flex-direction: column;
+      div {
+         width: 100%;
+         padding: 0;
+      }
+      img {
+         padding: 0;
+         padding-top: 2rem;
+      }
+   }
 }

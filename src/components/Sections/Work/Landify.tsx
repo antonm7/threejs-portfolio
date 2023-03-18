@@ -25,7 +25,7 @@ export default function Landify() {
                 <ColorBox title={"TypeScript"} color={"#D14AB9"} bgColor="pink"  />
             </div>
             <img alt="Landify screenshot" src={Bg} className="w-full relative z-50"/>
-            <div className="flex justify-center pt-12">
+            <div className={`${styles.bottom} flex justify-center pt-12`}>
                 <a href="https://landifypage.netlify.app/" target="_blank">
                     <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
                 </a>

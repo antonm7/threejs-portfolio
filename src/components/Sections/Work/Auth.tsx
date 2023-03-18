@@ -23,7 +23,7 @@ export default function Auth() {
             </div>
             <div className={`${styles.img} w-full h-[525px] relative z-50`} 
             style={{backgroundImage:'url(/projects/auth.png)'}}/>
-            <div className="flex justify-center pt-12">
+            <div className={`${styles.bottom} flex justify-center pt-12`}>
                 <a href="https://dev.to/antonm7/nextjs-auth-with-prisma-and-refresh-tokens-jwt-5he1" target="_blank">
                     <FullButton onClick={() => null} title="Article" marginRight="2rem"/>
                 </a>

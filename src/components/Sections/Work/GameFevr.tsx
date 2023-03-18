@@ -23,13 +23,15 @@ export default function GameFevr() {
             </p>
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
                 Some features this website includes: <br />
-                <ul className="pl-2">
-                    <li className="">- Register and login authentication</li>
-                    <li>- Reset Password with email via SendGrid</li>
-                    <li>- Visit and rank other users</li>
-                    <li>- Post reviews on games</li>
-                    <li>- Animations</li>
-                    <li>- Rate game</li>
+                <ul className="pl-2 pt-2">
+                    <li className="pt-4"><span className="underline"> Register and login authentication</span> - created with NextAuth (now called Auth.js)</li>
+                    <li className="pt-4"><span className="underline">Reset Password with email via SendGrid</span> - user can write his email, then on the backend
+                    it generates a link available only for him that gets send to his email. 
+                    The link navigates the user to a reset password form.</li>
+                    <li className="pt-4"><span className="underline">Visit and rank other users</span> - in the website users can visit other user profiles and hype them (adds points to each user). The hype rank is getting increased based on user activity in the website.</li>
+                    <li className="pt-4"><span className="underline">Post reviews on games</span> - users can post their review on any game, other users can view the review, like or dislike the review.</li>
+                    <li className="pt-4"><span className="underline">Animations</span> - created some animations with react-lottie (created in animation software) and some animations created with gsap.</li>
+                    <li className="pt-4"><span className="underline">Rate game</span> - any user can rate the game, and change his rating any time he want!</li>
                 </ul>
             </p>
             <h2 className="responsive_subTitle pt-16 text-black font-integral font-bold text-4xl">TECH:</h2>
@@ -45,8 +47,6 @@ export default function GameFevr() {
                 <ColorBox title={"Zustand"} color={"#5F55D2"} bgColor="purple" />
                 <ColorBox title={"Express JS"} color={"#EF4D83"} bgColor="pink" />
             </div>
-            {/* <div className={`${styles.img} w-full h-[525px] relative z-50`} 
-            style={{backgroundImage:'url(/projects/gameFevr.png)'}}/> */}
             <div className={`w-full table ${styles.table_wrapper}`}>
                 <div className="w-2/4 float-left pr-2">
                     <img src={Game} className="w-full"/>
@@ -57,12 +57,12 @@ export default function GameFevr() {
                     <img src={Profile} className="w-full pt-4"/>
                 </div>
             </div>
-            <div className="flex justify-center pt-12">
+            <div className={`${styles.bottom} flex justify-center pt-12`}>
                 <a href="https://www.gamefevr.com/" target="_blank">
-                    <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
+                    <FullButton title="Live Website" marginRight="2rem"/>
                 </a>
                 <a href="https://github.com/antonm7/gamefevr-website-client" target="_blank">
-                    <BorderedButton onClick={() => null} title="GitHub"/>
+                    <BorderedButton title="GitHub"/>
                 </a>
             </div>
         </Layout>

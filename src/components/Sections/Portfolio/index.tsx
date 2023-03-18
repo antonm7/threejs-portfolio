@@ -57,10 +57,10 @@ export default function Portfolio() {
             <div className="pt-14 relative z-50">
                 {store.section === 'landing' ?
                     <Slider afterChange={(i:number) => setCurrent(i)} {...settings} ref={slickSlider}>
-                        <Project to="poetry" title="Poetry Landing Page" img="/projects/poetry.png"/>
-                        <Project to="landify" title="Landify Landing Page" img="/projects/landify.png"/>
-                        <Project to="magicEditor" title="Magic Editor Landing Page" img="/projects/magic.png"/>
-                        <Project to="keeper" title="Keeper Landing Page" img="/projects/keeper.png"/>
+                        <Project to="poetry" title="Poetry Landing Page" img="/projects/poetry.jpg"/>
+                        <Project to="landify" title="Landify Landing Page" img="/projects/landify.jpg"/>
+                        <Project to="magicEditor" title="Magic Editor Landing Page" img="/projects/magic.jpg"/>
+                        <Project to="keeper" title="Keeper Landing Page" img="/projects/keeper.jpg"/>
                     </Slider> :
                     store.section === 'fullstack' ? 
                     <Slider ref={slickSlider} {...settings}>

@@ -5,6 +5,8 @@
     @include for-size(tablet-portrait) {
         padding: 1.5rem;
         height: min-content;
+        max-height: 100%;
+        overflow: auto;
     }
     &::-webkit-scrollbar {
         width: 0;
@@ -20,7 +22,7 @@
         right: 0px;
         bottom: 0px;
         left: 0px;
-        opacity: 0.3;
+        opacity: 0.22;
         z-index: 1;
         pointer-events: none;
         @include for-size(tablet-portrait) {

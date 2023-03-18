@@ -22,3 +22,13 @@
       }
    }
 }
+
+.bottom {
+   @include for-size(small-phone) {
+      flex-wrap: wrap;
+      button {
+         margin-right: 0 !important;
+         margin-bottom: 1rem;
+      }
+   }
+}

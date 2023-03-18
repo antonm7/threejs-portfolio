@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
 interface Props {
-    onClick: () => void
+    onClick?: () => void
     title:string
 }
 

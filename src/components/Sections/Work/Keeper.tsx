@@ -6,6 +6,7 @@ import ColorBox from "../../Common/ColorBox";
 import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import Bg from '/projects/keeperFull.png';
+import styles from './index.module.scss';
 
 export default function Keeper() {
     const navigate = useNavigate()
@@ -23,7 +24,7 @@ export default function Keeper() {
                 <ColorBox title={"TypeScript"} color={"#D14AB9"} bgColor="pink"  />
             </div>
            <img alt="keeper screenshot" src={Bg} className="relative z-50 w-full"/>
-            <div className="flex justify-center pt-12">
+            <div className={`${styles.bottom} flex justify-center pt-12`}>
                 <a href="https://plant-keeper.netlify.app/" target="_blank">
                     <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
                 </a>

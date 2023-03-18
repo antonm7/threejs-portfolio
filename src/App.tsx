@@ -15,10 +15,14 @@ import Landify from "./components/Sections/Work/Landify";
 import Keeper from "./components/Sections/Work/Keeper";
 import GameFevr from "./components/Sections/Work/GameFevr";
 import Auth from "./components/Sections/Work/Auth";
+import Email from "./components/Email";
+import { useStore } from "./store";
 
 function App() {
+  const emailVisibility = useStore(state => state.email)
   return (
     <div className="relative h-screen">
+      {emailVisibility ? <Email /> : null}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

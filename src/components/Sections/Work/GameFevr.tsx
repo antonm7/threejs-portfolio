@@ -32,7 +32,7 @@ export default function GameFevr() {
                     <li>- Rate game</li>
                 </ul>
             </p>
-            <h2 className="responsive_subTitle pt-16 text-black font-integral font-bold text-4xl">SKILLS:</h2>
+            <h2 className="responsive_subTitle pt-16 text-black font-integral font-bold text-4xl">TECH:</h2>
             <div className="flex flex-wrap items-center pt-8">
                 <ColorBox title={"Next JS"} color={"#5F55D2"} bgColor="purple" />
                 <ColorBox title={"SCSS"} color={"#D14AB9"} bgColor="pink" />

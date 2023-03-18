@@ -9,4 +9,7 @@
             padding-top: 9rem;
         }
     }
+    @include for-size(phone-only) {
+        min-height: 80rem !important;
+    }
 }

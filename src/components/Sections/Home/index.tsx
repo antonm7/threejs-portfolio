@@ -35,12 +35,11 @@ export default function Home() {
         </div>
         <div className="flex items-center pt-9">
           <span className="responsive_subTitle text-[#323232] font-display font-medium
-          text-3xl pr-5">Contact me via: </span>
+          text-3xl pr-5" id={styles.contact_me_text}>Contact me via: </span>
           <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer mr-7`}/>
           <a href="https://www.linkedin.com/in/anton-migolko-31980b213/" target="_blank">
             <img src={linkedin} className={`${styles.icon} cursor-pointer mr-7`}/>
           </a>
-          {/* <img src={twitter} className={`${styles.icon} cursor-pointer`}/> */}
         </div>
     </Layout>
   )

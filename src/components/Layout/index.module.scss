@@ -2,7 +2,7 @@
 
 #wrapper {
     background-color: rgba(255, 255, 255, 0.85);
-    @include for-size(phone-only) {
+    @include for-size(tablet-portrait) {
         padding: 1.5rem;
         height: min-content;
     }
@@ -36,7 +36,10 @@
         left: 50%;
         transform: translateX(-50%);
         width: 95vw;
-        overflow-y: auto;
+        
+    }
+    @include for-size(small-phone) {
+        width: 99vw;
     }
     
 }

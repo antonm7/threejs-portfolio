@@ -23,14 +23,17 @@ export default function Email() {
             mt-12 h-min
              flex flex-col items-center justify-center w-min
               bg-white px-12 py-4 rounded-lg'>
-                <FontAwesomeIcon onClick={() => changeEmail(false)} className='absolute right-6 top-4 h-5 cursor-pointer' icon={faXmark}/>
+                <FontAwesomeIcon onClick={() => changeEmail(false)} className='absolute right-6 top-4 h-5 cursor-pointer'
+                 icon={faXmark}/>
                 <h1 className='opacity-90 text-textGray font-display text-3xl font-bold'>My Email</h1>
                 <p className='pt-2 opacity-90 text-center text-textGray font-fisplay text-lg font-bold'>
                     Feel free to contact me anytime for everything!
                 </p>
-                <span className='opacity-90 pt-3 text-textGray font-display text-3xl font-semibold'>migolkoanton@gmail.com </span>
+                <span className='opacity-90 pt-3 text-textGray font-display text-3xl font-semibold'>
+                    migolkoanton@gmail.com </span>
                 <div className='pt-6 pb-2'>
-                    <button onClick={() => copy()} className={`text-lg px-6 py-2 ${isCopied ? 'bg-green-600' : 'bg-mainPurple'} 
+                    <button onClick={() => copy()} className={`text-lg px-6 py-2 ${isCopied ? 'bg-green-600' :
+                     'bg-mainPurple'} 
                     rounded-lg text-white font-display font-medium`}>{isCopied ? 'copied' : 'copy'}</button>
                 </div>
             </div>

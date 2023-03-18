@@ -17,4 +17,19 @@
         left: 0px;
         opacity: 0.6;
     }
+    div {
+        @include for-size(phone-only) {
+            max-width: 100%;
+            padding: 1rem !important;
+            h1{
+                font-size: 1.7rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            span {
+                font-size: 1.4rem;
+            }
+        }   
+    }
 }

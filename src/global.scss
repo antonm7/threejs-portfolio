@@ -38,7 +38,10 @@
 }
 
 @mixin for-size($size) {
-    @if($size == phone-only) {
+    @if($size == small-phone) {
+        @media (max-width:440px) {@content;}
+    }
+    @else if($size == phone-only) {
         @media (max-width:600px) {@content;}
     }@else if($size == tablet-portrait) {
         @media (max-width:900px) {@content;}
@@ -62,6 +65,7 @@
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow-x: hidden !important;
 }
 
 .cyber-text {

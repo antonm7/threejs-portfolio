@@ -6,6 +6,8 @@ import ColorBox from "../../Common/ColorBox";
 import FullButton from "../../Common/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
+import Bg from '/projects/landifyFull.png'
+
 
 export default function Landify() {
     const navigate = useNavigate()
@@ -22,8 +24,7 @@ export default function Landify() {
                 <ColorBox title={"TailwindCSS"} color={"#DD9516"} bgColor="orange" />
                 <ColorBox title={"TypeScript"} color={"#D14AB9"} bgColor="pink"  />
             </div>
-            <div className={`${styles.img} w-full h-[525px] relative z-50`} 
-            style={{backgroundImage:'url(/projects/landify.png)'}}/>
+            <img alt="Landify screenshot" src={Bg} className="w-full relative z-50"/>
             <div className="flex justify-center pt-12">
                 <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
                 <BorderedButton onClick={() => null} title="GitHub"/>

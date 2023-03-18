@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export default function Setup(props:any) {
-  const { nodes, materials }:any = useGLTF("/remvoed.glb");
+  const { nodes, materials }:any = useGLTF("/v1.glb");
 
   return (
     <group {...props} dispose={null}>
@@ -632,23 +632,23 @@ export default function Setup(props:any) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["image_(2)001"].geometry}
-        material={materials["image (2).005"]}
-        position={[-0.59, 3.22, -4.45]}
-        rotation={[Math.PI / 2, 0, -0.41]}
-        scale={[0.91, 0.98, 1.15]}
+        geometry={nodes["image_(2)"].geometry}
+        material={materials["Material.003"]}
+        position={[1.56, 3.23, -4.81]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[0.91, 1, 1.13]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["image_(2)"].geometry}
-        material={materials["image (2).004"]}
-        position={[1.56, 3.23, -4.81]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={[0.91, 1, 1.13]}
+        geometry={nodes["image_(2)001"].geometry}
+        material={materials["Material.002"]}
+        position={[-0.59, 3.22, -4.45]}
+        rotation={[Math.PI / 2, 0, -0.41]}
+        scale={[0.91, 0.98, 1.15]}
       />
     </group>
   );
 }
 
-useGLTF.preload("/remvoed.glb");
+useGLTF.preload("/v1.glb");

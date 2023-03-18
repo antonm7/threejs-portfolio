@@ -5,8 +5,8 @@ import email from '/assets/icons/email.png'
 import linkedin from '/assets/icons/linkedin.png'
 import twitter from '/assets/icons/twitter.png'
 import styles from './index.module.scss'
-import BorderedButton from "../../Common/BorderedButton";
-import FullButton from "../../Common/FullButton";
+import BorderedButton from "../../Common/Buttons/BorderedButton";
+import FullButton from "../../Common/Buttons/FullButton";
 import { useNavigate } from "react-router";
 import { useStore } from "../../../store";
 

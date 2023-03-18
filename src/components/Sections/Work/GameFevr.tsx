@@ -1,9 +1,9 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
-import BorderedButton from "../../Common/BorderedButton";
+import BorderedButton from "../../Common/Buttons/BorderedButton";
 import ColorBox from "../../Common/ColorBox";
-import FullButton from "../../Common/FullButton";
+import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Login from '/projects/gameFevr/login.png';
@@ -58,8 +58,12 @@ export default function GameFevr() {
                 </div>
             </div>
             <div className="flex justify-center pt-12">
-                <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
-                <BorderedButton onClick={() => null} title="GitHub"/>
+                <a href="https://www.gamefevr.com/" target="_blank">
+                    <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
+                </a>
+                <a href="https://github.com/antonm7/gamefevr-website-client" target="_blank">
+                    <BorderedButton onClick={() => null} title="GitHub"/>
+                </a>
             </div>
         </Layout>
     )

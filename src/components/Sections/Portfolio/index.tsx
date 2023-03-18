@@ -41,7 +41,7 @@ export default function Portfolio() {
                     </div>
                     Landing Pages
                 </button>
-                <button onClick={() => store.setSection('fullstack')} className="mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
+                <button onClick={() => store.setSection('fullstack')} className="mr-3 mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
                     <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {store.section === 'fullstack' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>

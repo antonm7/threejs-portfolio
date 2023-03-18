@@ -1,9 +1,9 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
-import BorderedButton from "../../Common/BorderedButton";
+import BorderedButton from "../../Common/Buttons/BorderedButton";
 import ColorBox from "../../Common/ColorBox";
-import FullButton from "../../Common/FullButton";
+import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Bg from '/projects/magicFull.png'
@@ -25,8 +25,12 @@ export default function Magic() {
             </div>
             <img alt="Magic screenshot" src={Bg} className="relative z-50 w-full"/>
             <div className="flex justify-center pt-12">
-                <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
-                <BorderedButton onClick={() => null} title="GitHub"/>
+                <a href="https://magic-editor.netlify.app/" target="_blank">
+                    <FullButton onClick={() => null} title="Live Website" marginRight="2rem"/>
+                </a>
+                <a href="https://github.com/antonm7/landing-page-magic-editor" target="_blank">
+                    <BorderedButton onClick={() => null} title="GitHub"/>
+                </a>
             </div>
         </Layout>
     )

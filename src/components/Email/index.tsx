@@ -2,7 +2,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { useStore } from '../../store';
-import FullButton from '../Common/FullButton';
+import FullButton from '../Common/Buttons/FullButton';
 import styles from './index.module.scss';
 
 export default function Email() {

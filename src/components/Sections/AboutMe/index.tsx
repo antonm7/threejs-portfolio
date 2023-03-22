@@ -1,10 +1,18 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { useStore } from "../../../store";
 import SkillBox from "../../Common/SkillBox";
 import Layout from "../../Layout";
+
 export default function AboutMe() {
     const navigate = useNavigate()
+    const updateLocation = useStore(store => store.updateLocation)
+
+    useEffect(() => {
+        updateLocation('/aboutMe')
+    },[])
 
     return (
         <Layout>

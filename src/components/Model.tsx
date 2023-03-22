@@ -1,8 +1,6 @@
-import { PresentationControls, Stats } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { PresentationControls } from '@react-three/drei'
+import { useRef } from 'react'
 import Setup from './Setup'
-import gsap from 'gsap'
 import useWidth from '../helpers/useWindowSize'
 
 export default function Model() {
@@ -12,7 +10,6 @@ export default function Model() {
 
     return (
         <>
-            <Stats />
             <ambientLight color={'white'} intensity={0.5}/>
             <PresentationControls  
                 polar={[-Math.PI / 1000, Math.PI / 1000]} 

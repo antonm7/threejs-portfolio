@@ -29,6 +29,12 @@ export default function Portfolio() {
     const slickSlider = useRef<any>(null)
     const store = useStore(state => state)
 
+    const updateLocation = useStore(store => store.updateLocation)
+
+    useEffect(() => {
+        updateLocation('/portfolio')
+    },[])
+
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

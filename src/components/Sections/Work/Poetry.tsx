@@ -7,9 +7,18 @@ import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Bg from '/projects/poetryFull.png'
+import { useStore } from "../../../store";
+import { useEffect } from "react";
 
 export default function Poetry() {
     const navigate = useNavigate()
+
+    const updateLocation = useStore(store => store.updateLocation)
+
+    useEffect(() => {
+        updateLocation('/work')
+    },[])
+    
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

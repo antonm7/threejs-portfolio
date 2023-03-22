@@ -2,7 +2,7 @@
 
 #canvas {
     @include for-size(tablet-portrait) {
-        min-height: 100rem !important;
+        min-height: 100rem;
         overflow: auto !important;
         padding-top: 0 !important;
         canvas {
@@ -10,6 +10,12 @@
         }
     }
     @include for-size(phone-only) {
-        min-height: 80rem !important;
+        min-height: 80rem;
+    }
+}
+
+.responsive_height {
+    @include for-size(phone-only) {
+        min-height: 120rem !important;
     }
 }

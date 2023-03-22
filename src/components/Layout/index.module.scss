@@ -5,8 +5,8 @@
     @include for-size(tablet-portrait) {
         padding: 1.5rem;
         height: min-content;
-        max-height: 100%;
-        overflow: auto;
+        min-height: auto;
+        height: fit-content;
     }
     &::-webkit-scrollbar {
         width: 0;
@@ -42,6 +42,13 @@
     }
     @include for-size(small-phone) {
         width: 99vw;
+    }   
+}
+
+.responsive_height {
+    @include for-size(phone-only) {
+        overflow: auto !important;
+        min-height: 115rem !important;
+        height:115rem !important;
     }
-    
 }

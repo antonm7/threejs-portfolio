@@ -18,7 +18,7 @@ export default function Email() {
     }
 
     return (
-        <div className="absolute w-full h-full " id={styles.wrapper}>
+        <div className="absolute w-full h-full" id={styles.wrapper}>
             <div className='relative z-50 opacity-100 m-auto 
             mt-12 h-min
              flex flex-col items-center justify-center w-min

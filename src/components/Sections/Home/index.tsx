@@ -1,5 +1,4 @@
 import Layout from "../../Layout";
-import A from '/assets/general/A.svg'
 import A_white from '/assets/general/a_white.svg'
 import email from '/assets/icons/email.png'
 import linkedin from '/assets/icons/linkedin.png'
@@ -9,10 +8,16 @@ import BorderedButton from "../../Common/Buttons/BorderedButton";
 import FullButton from "../../Common/Buttons/FullButton";
 import { useNavigate } from "react-router";
 import { useStore } from "../../../store";
+import { useEffect } from "react";
 
 export default function Home() {
   const navigate = useNavigate()
   const setEmail = useStore(store => store.setEmail)
+  const updateLocation = useStore(store => store.updateLocation)
+
+  useEffect(() => {
+    updateLocation('/')
+  },[])
 
   return (
       <Layout>

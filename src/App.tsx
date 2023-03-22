@@ -3,7 +3,7 @@ import Model from "./components/Model"
 import {
   BrowserRouter,
   Route,
-  Routes
+  Routes,
 } from "react-router-dom";
 import styles from './app.module.scss';
 import Home from "./components/Sections/Home"
@@ -17,33 +17,39 @@ import GameFevr from "./components/Sections/Work/GameFevr";
 import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
+import { Suspense } from "react";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
+  const location = useStore(state => state.location)
+
   return (
     <div className="relative h-screen">
-      {emailVisibility ? <Email /> : null}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutMe" element={<AboutMe />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/project/poetry" element={<Poetry />} />
-          <Route path="/project/magicEditor" element={<Magic />} />
-          <Route path="/project/landify" element={<Landify />} />
-          <Route path="/project/keeper" element={<Keeper />} />
-          <Route path="/project/gameFevr" element={<GameFevr />} />
-          <Route path="/project/auth" element={<Auth />} />
-        </Routes>
-      </BrowserRouter>
-      <Canvas id={styles.canvas} className="h-auto" shadows camera={{
-          fov:45,
-          near:0.1,
-          far:2000
+        {emailVisibility ? <Email /> : null}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutMe" element={<AboutMe />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/project/poetry" element={<Poetry />} />
+            <Route path="/project/magicEditor" element={<Magic />} />
+            <Route path="/project/landify" element={<Landify />} />
+            <Route path="/project/keeper" element={<Keeper />} />
+            <Route path="/project/gameFevr" element={<GameFevr />} />
+            <Route path="/project/auth" element={<Auth />} />
+          </Routes>
+        </BrowserRouter>
+        <Canvas id={styles.canvas} className={`h-auto ${location !== '/' ? styles.responsive_height : ''}`} shadows 
+          camera={{
+            fov:45,
+            near:0.1,
+            far:2000
           }}>
-        <Model />
-      </Canvas>
-    </div>
+          <Suspense fallback={null}>
+            <Model />
+          </Suspense>
+        </Canvas>
+      </div>
   )
 }
 

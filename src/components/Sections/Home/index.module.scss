@@ -1,20 +1,22 @@
 @import '../../../global.scss';
 
 #purple_wrapper {
-    min-width: 11.8rem;
+    min-width: 14.7rem;
+    width: 14.7rem;
     @include for-size(tablet-portrait) {
         height: 4.9rem;
-        width: 10rem;
+        min-width: 5rem;
+        width: 11.2rem;
     }
 }
 
 #a_white {
     top: 50%;
     transform: translateY(-50%);
-    left: 1rem;
+    left: 1.2rem;
+    height: 2.15rem;
     @include for-size(tablet-portrait) {
-        top: 48%;
-        height: 1.8rem !important;
+        height: 1.7rem !important;
     }
 }
 
@@ -23,8 +25,8 @@
     transform: translateY(-50%);
     left: 3.8rem;
     @include for-size(tablet-portrait) {
-        top: 41.8%;
-        left: 3.2rem;
+        top: 46%;
+        left: 3rem;
     }
 }
 

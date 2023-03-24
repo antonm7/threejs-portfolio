@@ -21,7 +21,6 @@ import { Suspense } from "react";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
-  const location = useStore(state => state.location)
 
   return (
     <div className="relative h-screen">
@@ -39,7 +38,7 @@ function App() {
             <Route path="/project/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
-        <Canvas id={styles.canvas} className={`h-auto ${location !== '/' ? styles.responsive_height : ''}`} shadows 
+        <Canvas id={styles.canvas} className={`h-auto`} shadows 
           camera={{
             fov:45,
             near:0.1,

@@ -14,8 +14,8 @@ export default function Model() {
             <PresentationControls  
                 polar={[-Math.PI / 1000, Math.PI / 1000]} 
                 azimuth={[-Math.PI / 100, Math.PI / 100]} >
-                <group scale={width && width >= 901 ? 1.1 : 0.9} ref={modelRef} 
-                    position={width && width >= 901 ? [0.4,-2.5,-1.1] : width && width >= 601 ? [-0.2,-5,-7] : [-0.2,-7,-10]}
+                <group scale={width && width >= 901 ? 1.1 : 1.1} ref={modelRef} 
+                    position={width && width >= 1800 ? [1.8,-2.5,-1.1] : width && width >= 901 ? [0.4,-2.5,-1.1] : width && width >= 601 ? [0,-5,-4] : [-0.2,-7,-10]}
                     rotation={width && width >= 901 ? [0,-0.5,0] : [0,0,0]}>
                     <pointLight shadow-mapSize-height={2048} shadow-mapSize-width={2048} 
                     ref={lightRef} castShadow color={'#FFEECF'} intensity={0.3}position={[4,5,4]} shadow-bias={-0.0001} />

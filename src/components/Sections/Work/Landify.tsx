@@ -7,17 +7,9 @@ import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Bg from '/projects/landifyFull.png'
-import { useStore } from "../../../store";
-import { useEffect } from "react";
-
 
 export default function Landify() {
     const navigate = useNavigate()
-    const updateLocation = useStore(state => state.updateLocation)
-    
-    useEffect(() => {
-        updateLocation('/work')
-    },[])
     
     return (
         <Layout>

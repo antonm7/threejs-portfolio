@@ -49,7 +49,7 @@
         @media (max-width:1250px) {@content;}
     }@else if($size == mid-desktop) {
         @media (max-width:1400px) {@content;}
-    }@else if($size == bid-desktop) {
+    }@else if($size == big-desktop) {
         @media (min-width:1800px) {@content;}
     }
 }
@@ -101,19 +101,19 @@ canvas {
 
 .responsive_title {
     @include for-size(tablet-portrait) {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 }
 
 .responsive_subTitle {
     @include for-size(tablet-portrait) {
-        font-size: 2rem;
+        font-size: 1.85rem;
     }
 }
 
 .responsive_para {
     @include for-size(tablet-portrait) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         max-width: 33rem;
     }
 }

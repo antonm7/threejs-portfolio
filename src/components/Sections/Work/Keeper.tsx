@@ -7,16 +7,10 @@ import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import Bg from '/projects/keeperFull.png';
 import styles from './index.module.scss';
-import { useStore } from "../../../store";
-import { useEffect } from "react";
 
 export default function Keeper() {
     const navigate = useNavigate()
-    const updateLocation = useStore(state => state.updateLocation)
-    
-    useEffect(() => {
-        updateLocation('/work')
-    },[])
+  
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

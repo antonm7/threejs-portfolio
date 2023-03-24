@@ -1,13 +1,14 @@
 import Layout from "../../Layout";
 import Slider from "react-slick";
 import Project from "../../Common/Project";
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import left from '/assets/general/left.png';
 import right from '/assets/general/right.png';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
 import { useStore } from "../../../store";
+import styles from './index.module.scss';
 
 const settings = {
     dots: false,
@@ -29,32 +30,26 @@ export default function Portfolio() {
     const slickSlider = useRef<any>(null)
     const store = useStore(state => state)
 
-    const updateLocation = useStore(store => store.updateLocation)
-
-    useEffect(() => {
-        updateLocation('/portfolio')
-    },[])
-
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/')} icon={faArrowLeft} className="z-50 w-6 h-6"/>
             <h1 className="responsive_title text-black font-integral font-black text-[55px]">MY PORTFOLIO</h1>
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">Some works I have built includes landing pages, fullstack websites and backend code.</p>
             <div className="flex flex-wrap pt-10">
-                <button onClick={() => store.setSection('landing')} className="mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'landing' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                <button onClick={() => store.setSection('landing')} className={`${styles.switchers} mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl`}>
+                    <div className={`${styles.circle} mr-5 w-7 h-7 p-1 border-2 ${store.section === 'landing' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {store.section === 'landing' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     Landing Pages
                 </button>
-                <button onClick={() => store.setSection('fullstack')} className="mr-3 mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                <button onClick={() => store.setSection('fullstack')} className={`${styles.switchers} mr-3 mb-3 px-12 max-w-96 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl`}>
+                    <div className={`${styles.circle} mr-5 w-7 h-7 p-1 border-2 ${store.section === 'fullstack' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {store.section === 'fullstack' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     FullStack Websites
                 </button>
-                <button onClick={() => store.setSection('backend')} className="mb-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl">
-                    <div className={`mr-5 w-7 h-7 p-1 border-2 ${store.section === 'backend' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
+                <button onClick={() => store.setSection('backend')} className={`${styles.switchers} mb-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl`}>
+                    <div className={`${styles.circle} mr-5 w-7 h-7 p-1 border-2 ${store.section === 'backend' ? 'border-[#30C952]' : 'border-[#D9D9D9]'} rounded-full`}>
                         {store.section === 'backend' ? <div className="w-full h-full bg-[#30C952] rounded-full"></div> : null}
                     </div>
                     Backend Code

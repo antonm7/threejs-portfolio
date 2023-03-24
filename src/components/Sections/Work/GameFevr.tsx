@@ -10,17 +10,10 @@ import Login from '/projects/gameFevr/login.png';
 import Game from '/projects/gameFevr/game.png';
 import Home from '/projects/gameFevr/home.png';
 import Profile from '/projects/gameFevr/profile.png';
-import { useStore } from "../../../store";
-import { useEffect } from "react";
  
 export default function GameFevr() {
     const navigate = useNavigate()
 
-    const updateLocation = useStore(state => state.updateLocation)
-    
-    useEffect(() => {
-        updateLocation('/work')
-    },[])
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

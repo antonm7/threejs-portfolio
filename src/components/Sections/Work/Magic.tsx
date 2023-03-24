@@ -7,17 +7,10 @@ import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Bg from '/projects/magicFull.png'
-import { useStore } from "../../../store";
-import { useEffect } from "react";
 
 export default function Magic() {
     const navigate = useNavigate()
-    const updateLocation = useStore(state => state.updateLocation)
     
-    useEffect(() => {
-        updateLocation('/work')
-    },[])
-
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

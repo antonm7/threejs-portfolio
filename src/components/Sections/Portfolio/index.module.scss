@@ -1,0 +1,13 @@
+@import '../../../global.scss';
+
+.switchers {
+    @include for-size(phone-only) {
+        font-size: 1.3rem !important;
+        min-width: 100%;
+        width: 100% !important;
+    }
+    .circle {
+        min-width: 1.75rem !important;
+        height: 1.75rem !important;
+    }
+}

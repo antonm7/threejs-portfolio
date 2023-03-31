@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import styles from './app.module.scss';
 import Home from "./components/Sections/Home"
-// import Model from "./components/Model";
 import Portfolio from "./components/Sections/Portfolio";
 import AboutMe from "./components/Sections/AboutMe";
 import Poetry from "./components/Sections/Work/Poetry";
@@ -18,7 +17,6 @@ import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
 import React, { Suspense } from "react";
-import Loader from "./components/Loader";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
@@ -50,7 +48,6 @@ function App() {
             <Route path="/project/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
-        <Suspense fallback={<Loader />}>
           <Canvas id={styles.canvas} className={`h-auto`} shadows 
             camera={{
               fov:45,
@@ -59,7 +56,6 @@ function App() {
             }}>
             <Model />
           </Canvas>
-        </Suspense>
       </div>
   )
 }

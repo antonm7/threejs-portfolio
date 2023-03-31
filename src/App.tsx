@@ -18,6 +18,7 @@ import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
 import React, { Suspense } from "react";
+import Loader from "./components/Loader";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
@@ -49,7 +50,7 @@ function App() {
             <Route path="/project/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Canvas id={styles.canvas} className={`h-auto`} shadows 
             camera={{
               fov:45,

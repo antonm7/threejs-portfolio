@@ -17,7 +17,6 @@ import GameFevr from "./components/Sections/Work/GameFevr";
 import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
-import { Suspense } from "react";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
@@ -44,9 +43,7 @@ function App() {
             near:0.1,
             far:2000
           }}>
-          <Suspense fallback={null}>
-            <Model />
-          </Suspense>
+          <Model />
         </Canvas>
       </div>
   )

@@ -1,35 +1,5 @@
 @import '../../../global.scss';
 
-#purple_wrapper {
-    min-width: 14.7rem;
-    width: 14.7rem;
-    @include for-size(tablet-portrait) {
-        height: 4.9rem;
-        min-width: 5rem;
-        width: 11.2rem;
-    }
-}
-
-#a_white {
-    top: 50%;
-    transform: translateY(-50%);
-    left: 1.2rem;
-    height: 2.15rem;
-    @include for-size(tablet-portrait) {
-        height: 1.7rem !important;
-    }
-}
-
-#nton_white {
-    top: 43.5%;
-    transform: translateY(-50%);
-    left: 3.8rem;
-    @include for-size(tablet-portrait) {
-        top: 46%;
-        left: 3rem;
-    }
-}
-
 #buttons_wrapper {
     @include for-size(phone-only) {
         flex-wrap: wrap;

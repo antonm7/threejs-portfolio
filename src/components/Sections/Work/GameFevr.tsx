@@ -17,7 +17,7 @@ export default function GameFevr() {
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>
-            <h1 className="responsive_title text-black font-integral font-black text-[55px]">Game Fevr</h1>
+            <h1 className="responsive_title text-black font-integral font-black">Game Fevr</h1>
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
                 Searching games by filters like release year, genre, platform.
                 Design made by top designer and provided via zeplin. <br />

@@ -1,5 +1,4 @@
 import Layout from "../../Layout";
-import A_white from '/assets/general/a_white.svg'
 import email from '/assets/icons/email.svg'
 import linkedin from '/assets/icons/linkedin.svg'
 import twitter from '/assets/icons/twitter.png'
@@ -8,6 +7,7 @@ import BorderedButton from "../../Common/Buttons/BorderedButton";
 import FullButton from "../../Common/Buttons/FullButton";
 import { useNavigate } from "react-router";
 import { useStore } from "../../../store";
+import PurpleWrapper from "../../PurpleWrapper";
 
 export default function Home() {
   const navigate = useNavigate()
@@ -15,12 +15,9 @@ export default function Home() {
 
   return (
       <Layout>
-        <div id={styles.purple_wrapper} className="flex flex-nowrap bg-mainPurple rounded-2xl w-[230px] h-[84px] relative">
-          <img src={A_white} className="h-8 pr-[3px] absolute" id={styles.a_white}/>
-          <span className="responsive_title text-5xl font-bold font-integral text-white absolute" id={styles.nton_white}>NTON</span>
-        </div>
+        <PurpleWrapper />
         <div className="flex-col pt-8" id={styles.hi_titles_wrapper}>
-          <h1 className="responsive_title font-integral font-bold text-5xl leading-snug">
+          <h1 className="responsive_title font-integral font-bold leading-snug">
             👋 HI! I'M A FULL-STACK DEVELOPER
           </h1>
         </div>
@@ -28,7 +25,7 @@ export default function Home() {
           Im a 21 years old from Israel. <br /> Im really passionate about developing and learning 
           everything related to the world of programming.
         </p>
-        <div className="flex pt-20" id={styles.buttons_wrapper}>
+        <div className="flex pt-16" id={styles.buttons_wrapper}>
           <BorderedButton onClick={() => navigate('/portfolio')} marginRight={"1.5rem"} title='See Portfolio'/>
           <FullButton onClick={() => navigate('/aboutMe')} title='About Me' marginRight={'1.5rem'}/>
         </div>

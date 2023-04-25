@@ -33,7 +33,7 @@ export default function Portfolio() {
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/')} icon={faArrowLeft} className="z-50 w-6 h-6"/>
-            <h1 className="responsive_title text-black font-integral font-black text-[55px]">MY PORTFOLIO</h1>
+            <h1 className="responsive_title text-black font-integral font-black">MY PORTFOLIO</h1>
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">Some works I have built includes landing pages, fullstack websites and backend code.</p>
             <div className="flex flex-wrap pt-10">
                 <button onClick={() => store.setSection('landing')} className={`${styles.switchers} mb-3 mr-3 max-w-80 w-80 h-20 flex justify-center items-center bg-white rounded-lg font-display font-bold text-2xl`}>

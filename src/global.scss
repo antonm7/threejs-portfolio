@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'loaders.css/src/animations/ball-grid-beat.scss';
+$primary-color: white;
+
 
 @font-face {
     font-family: SF Pro Display;
@@ -100,20 +103,39 @@ canvas {
 .slick-slide>div {padding: 0 5px;}
 
 .responsive_title {
+    font-size: 2.25rem;
+    @include for-size(big-desktop) {
+        font-size: 2.8rem;
+    }
     @include for-size(tablet-portrait) {
         font-size: 2.2rem;
     }
 }
 
 .responsive_subTitle {
+    font-size: 1.9rem;
+    @include for-size(big-desktop) {
+        font-size: 2.2rem;
+    }
     @include for-size(tablet-portrait) {
-        font-size: 1.85rem;
+        font-size: 1.8rem;
     }
 }
 
 .responsive_para {
+    font-size: 1.6rem;
+    @include for-size(big-desktop) {
+        font-size: 1.8rem;
+    }
     @include for-size(tablet-portrait) {
         font-size: 1.3rem;
         max-width: 33rem;
     }
+}
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
 }

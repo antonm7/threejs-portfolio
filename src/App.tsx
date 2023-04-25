@@ -5,7 +5,7 @@ import {
   Routes,
 } from "react-router-dom";
 import styles from './app.module.scss';
-import Home from "./components/Sections/Home"
+import Home from "./components/Sections/Home";
 import Portfolio from "./components/Sections/Portfolio";
 import AboutMe from "./components/Sections/AboutMe";
 import Poetry from "./components/Sections/Work/Poetry";
@@ -16,47 +16,49 @@ import GameFevr from "./components/Sections/Work/GameFevr";
 import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
+import {Html, useProgress} from '@react-three/drei'
+import Model from "./components/Model";
+import Loader from "react-loaders";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
 
-  const Model = React.lazy(() => import('./components/Model'))
-  // const Home = React.lazy(() => import('./components/Sections/Home'))
-  // const AboutMe = React.lazy(() => import('./components/Sections/AboutMe'))
-  // const Portfolio = React.lazy(() => import('./components/Sections/Portfolio'))
-  // const Poetry = React.lazy(() => import('./components/Sections/Work/Poetry'))
-  // const Magic = React.lazy(() => import('./components/Sections/Work/Magic'))
-  // const Landify = React.lazy(() => import('./components/Sections/Work/Landify'))
-  // const Keeper = React.lazy(() => import('./components/Sections/Work/Keeper'))
-  // const GameFevr = React.lazy(() => import('./components/Sections/Work/GameFevr'))
-  // const Auth = React.lazy(() => import('./components/Sections/Work/Auth'))
+  const {progress} = useProgress()
+
+  if(progress < 100) {
+    return (
+      <div className="flex justify-center items-center bg-[#B0C6D0] h-screen">
+        <Loader innerClassName="h-54" active type="ball-grid-beat" />
+      </div>
+    )
+  } 
 
   return (
-    <div className="relative h-screen">
-        {emailVisibility ? <Email /> : null}
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/project/poetry" element={<Poetry />} />
-            <Route path="/project/magicEditor" element={<Magic />} />
-            <Route path="/project/landify" element={<Landify />} />
-            <Route path="/project/keeper" element={<Keeper />} />
-            <Route path="/project/gameFevr" element={<GameFevr />} />
-            <Route path="/project/auth" element={<Auth />} />
-          </Routes>
-        </BrowserRouter>
-          <Canvas id={styles.canvas} className={`h-auto`} shadows 
-            camera={{
-              fov:45,
-              near:0.1,
-              far:2000
-            }}>
-            <Model />
-          </Canvas>
-      </div>
+      <div className="relative h-screen">
+          {emailVisibility ? <Email /> : null}
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/aboutMe" element={<AboutMe />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/project/poetry" element={<Poetry />} />
+                <Route path="/project/magicEditor" element={<Magic />} />
+                <Route path="/project/landify" element={<Landify />} />
+                <Route path="/project/keeper" element={<Keeper />} />
+                <Route path="/project/gameFevr" element={<GameFevr />} />
+                <Route path="/project/auth" element={<Auth />} />
+              </Routes>
+            </BrowserRouter>
+              <Canvas id={styles.canvas} className={`h-auto`} shadows 
+                camera={{
+                  fov:45,
+                  near:0.1,
+                  far:2000
+                }}>
+                    <Model />
+              </Canvas>
+        </div>
   )
 }
 

@@ -45,9 +45,35 @@
         left: 50%;
         transform: translateX(-50%);
         width: 95vw;
-        
     }
     @include for-size(small-phone) {
-        width: 99vw;
+        width: 100vw;
+        position: relative;
     }   
+}
+
+#small_wrapper {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::before {
+        content: "";
+        background-image: url('/public/assets/bg/aboutMe.webp');
+        background-size: cover;
+        background-position:center left;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: -32px;
+        opacity: 0.22;
+        z-index: 1;
+        pointer-events: none;
+        @include for-size(tablet-portrait) {
+            background-position: top left;
+        }
+    }
 }

@@ -8,4 +8,7 @@
             font-size: 1.7rem;
         }
     }
+    @include for-size(phone-only) {
+        background-color: rgb(236, 236, 236) !important;
+    }
 }

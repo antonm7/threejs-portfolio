@@ -20,13 +20,14 @@ import React, { Suspense, useEffect } from "react";
 import {Html, useProgress} from '@react-three/drei'
 import Model from "./components/Model";
 import Loader from "react-loaders";
+import useWidth from "./helpers/useWindowSize";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
-
   const {progress} = useProgress()
+  const width = useWidth()
 
-  if(progress < 100) {
+  if(width && width >= 601 && progress < 100) {
     return (
       <div className="flex justify-center items-center bg-[#B0C6D0] h-screen">
         <Loader innerClassName="h-54" active type="ball-grid-beat" />
@@ -34,8 +35,9 @@ function App() {
     )
   } 
 
-  return (
-      <div className="relative h-screen">
+  if(width && width >= 601) {
+      return (
+        <div className="relative h-screen">
           {emailVisibility ? <Email /> : null}
             <BrowserRouter>
               <Routes>
@@ -50,16 +52,38 @@ function App() {
                 <Route path="/project/auth" element={<Auth />} />
               </Routes>
             </BrowserRouter>
-              <Canvas id={styles.canvas} className={`h-auto`} shadows 
-                camera={{
-                  fov:45,
-                  near:0.1,
-                  far:2000
-                }}>
-                    <Model />
-              </Canvas>
+            <Canvas id={styles.canvas} className={`h-auto`} shadows 
+              camera={{
+                fov:45,
+                near:0.1,
+                far:2000
+              }}>
+                <Model />
+            </Canvas>
         </div>
-  )
+      )
+    
+  } else {
+    return (
+      <>
+      {emailVisibility ? <Email /> : null}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutMe" element={<AboutMe />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/project/poetry" element={<Poetry />} />
+            <Route path="/project/magicEditor" element={<Magic />} />
+            <Route path="/project/landify" element={<Landify />} />
+            <Route path="/project/keeper" element={<Keeper />} />
+            <Route path="/project/gameFevr" element={<GameFevr />} />
+            <Route path="/project/auth" element={<Auth />} />
+          </Routes>
+        </BrowserRouter>
+      </>
+    )
+  }
+
 }
 
 export default App

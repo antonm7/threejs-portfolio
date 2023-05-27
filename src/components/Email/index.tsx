@@ -12,9 +12,10 @@ export default function Email() {
     const copy = () => {
         navigator.clipboard.writeText('migolkoanton@gmail.com')
         setCopied(true)
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setCopied(false)
         },1500)
+        clearTimeout(timeout)
     }
 
     return (

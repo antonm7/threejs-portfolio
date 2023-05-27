@@ -16,11 +16,11 @@ import GameFevr from "./components/Sections/Work/GameFevr";
 import Auth from "./components/Sections/Work/Auth";
 import Email from "./components/Email";
 import { useStore } from "./store";
-import React, { Suspense, useEffect } from "react";
-import {Html, useProgress} from '@react-three/drei'
+import {useProgress} from '@react-three/drei'
 import Model from "./components/Model";
 import Loader from "react-loaders";
 import useWidth from "./helpers/useWindowSize";
+import AmazonClone from "./components/Sections/Work/AmazonClone";
 
 function App() {
   const emailVisibility = useStore(state => state.email)
@@ -49,7 +49,8 @@ function App() {
                 <Route path="/project/landify" element={<Landify />} />
                 <Route path="/project/keeper" element={<Keeper />} />
                 <Route path="/project/gameFevr" element={<GameFevr />} />
-                <Route path="/project/auth" element={<Auth />} />
+                <Route path="/project/amazonClone" element={<AmazonClone />} />
+                <Route path="/project/auth" element={<Auth />} /> 
               </Routes>
             </BrowserRouter>
             <Canvas id={styles.canvas} className={`h-auto`} shadows 

@@ -10,6 +10,7 @@ import Login from '/projects/gameFevr/login.png';
 import Game from '/projects/gameFevr/game.png';
 import Home from '/projects/gameFevr/home.png';
 import Profile from '/projects/gameFevr/profile.png';
+import PdfButton from "../../Common/PdfButton";
  
 export default function GameFevr() {
     const navigate = useNavigate()
@@ -18,6 +19,7 @@ export default function GameFevr() {
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/portfolio')} icon={faArrowLeft} className="z-50 w-6 h-6"/>
             <h1 className="responsive_title text-black font-integral font-black">Game Fevr</h1>
+            <PdfButton path="/projects/gameFevr/gamefevr.pdf" />
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
                 Searching games by filters like release year, genre, platform.
                 Design made by top designer and provided via zeplin. <br />

@@ -78,6 +78,7 @@ function App() {
             <Route path="/project/landify" element={<Landify />} />
             <Route path="/project/keeper" element={<Keeper />} />
             <Route path="/project/gameFevr" element={<GameFevr />} />
+            <Route path="/project/amazonClone" element={<AmazonClone />} />
             <Route path="/project/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>

@@ -1,4 +1,4 @@
-@import '../../../global.scss';
+@import '../../../responsive.scss';
 
 .switchers {
     @include for-size(phone-only) {

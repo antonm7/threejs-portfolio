@@ -1,4 +1,4 @@
-@import '../../../global.scss';
+@import '../../../responsive.scss';
 
 #buttons_wrapper {
     @include for-size(phone-only) {

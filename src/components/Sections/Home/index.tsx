@@ -1,6 +1,7 @@
 import Layout from "../../Layout";
 import email from '/assets/icons/email.svg'
 import linkedin from '/assets/icons/linkedin.svg'
+import github from '/assets/icons/github.png'
 import twitter from '/assets/icons/twitter.png'
 import styles from './index.module.scss'
 import BorderedButton from "../../Common/Buttons/BorderedButton";
@@ -21,9 +22,10 @@ export default function Home() {
             👋 HI! I'M A FULL-STACK DEVELOPER
           </h1>
         </div>
-        <p className="responsive_para font-display font-normal text-3xl max-w-2xl pt-12 leading-relaxed">
-          Im a 21 years old from Israel. <br /> Im really passionate about developing and learning 
-          everything related to the world of programming.
+        <p className="responsive_para font-display font-normal text-3xl max-w-2xl pt-12 leading-loose">
+          I'm Anton, a 21-year-old full-stack junior developer from Israel. <br />
+          Passionate about coding and love to learn new technologies, I find joy in bringing ideas to life through development.
+          I am dedicated to improve my skills and staying updated with the latest industry trends.
         </p>
         <div className="flex pt-16" id={styles.buttons_wrapper}>
           <BorderedButton onClick={() => navigate('/portfolio')} marginRight={"1.5rem"} title='See Portfolio'/>
@@ -32,9 +34,9 @@ export default function Home() {
         <div className="flex items-center pt-9">
           <span className="responsive_subTitle text-[#323232] font-display font-medium
           text-3xl pr-5" id={styles.contact_me_text}>Contact me via: </span>
-          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer mr-7`}/>
-          <a href="https://www.linkedin.com/in/anton-migolko-31980b213/" target="_blank">
-            <img src={linkedin} className={`${styles.icon} cursor-pointer mr-7`}/>
+          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer h-6 mr-4`}/>
+          <a href="https://github.com/antonm7" target="_blank">
+            <img src={github} className={`${styles.icon} h-7 cursor-pointer mr-7`}/>
           </a>
         </div>
     </Layout>

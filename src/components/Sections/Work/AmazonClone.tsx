@@ -10,6 +10,7 @@ import Main from '/projects/amazonShop.png';
 import Checkout from '/projects/amazonClone/checkout.png';
 import Item from '/projects/amazonClone/item.png';
 import Complete from '/projects/amazonClone/complete.png';
+import ScrollToTop from "../../../helpers/scrollToTop";
  
 export default function AmazonClone() {
     const navigate = useNavigate()

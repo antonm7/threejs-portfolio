@@ -23,9 +23,6 @@ export default function AboutMe() {
                     I am very organized person, problem solver, love to take challenges and
                     love to collaborate and work with other developers.
                 </p>
-                <p className="pt-4">
-                    When I'm not sitting in front of the computer I like to travel, run in the sea or read a good book.
-                </p>
             </div>
             <h2 className="responsive_subTitle pt-16 text-black font-integral font-bold text-4xl">SKILLS:</h2>
             <div className="flex flex-wrap pt-10">

@@ -28,7 +28,7 @@ export default function Email() {
                  icon={faXmark}/>
                 <h1 className='opacity-90 text-textGray font-display text-3xl font-bold'>My Email</h1>
                 <p className='pt-2 opacity-90 text-center text-textGray font-fisplay text-lg font-bold'>
-                    Feel free to contact me anytime for everything!
+                    Feel free to contact me anytime!
                 </p>
                 <span className='opacity-90 pt-3 text-textGray font-display text-3xl font-semibold'>
                     migolkoanton@gmail.com </span>

@@ -85,7 +85,7 @@ export default function Portfolio() {
                         else if(store.section === 'fullstack') {
                             current === FULLSTACK_LENGTH - 1 ? null : slickSlider.current.slickNext()
                         } else {
-                            current === BACKEND_LENGTH - 1 ? null : slickSlider.current.slickNext()
+                            current === FULLSTACK_LENGTH - 1 ? null : slickSlider.current.slickNext()
                         }
                     }} 
                     className={`${current === (store.section === 'landing'

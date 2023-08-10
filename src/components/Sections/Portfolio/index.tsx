@@ -70,7 +70,7 @@ export default function Portfolio() {
                     store.section === 'fullstack' ? 
                     <Slider afterChange={i => setCurrent(i)} ref={slickSlider} {...settings}>
                         <Project to="gameFevr" title="GameFavr Website" img="/projects/gameFevr.png"/>
-                        <Project to="amazonClone" title="Amazon Clone" img="/projects/amazonShop.png"/>
+                        <Project to="amazonClone" title="Amazon Clone" img="/projects/amazonShop_min.webp"/>
                     </Slider> :
                     <Slider afterChange={i => setCurrent(i)} ref={slickSlider} {...settings}>
                         <Project to="auth" title="Refresh Tokens Authentication Article" img="/projects/auth.png"/>

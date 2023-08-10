@@ -1,8 +1,6 @@
 import Layout from "../../Layout";
-import email from '/assets/icons/email.svg'
-import linkedin from '/assets/icons/linkedin.svg'
+import email from '/assets/icons/email.webp'
 import github from '/assets/icons/github.png'
-import twitter from '/assets/icons/twitter.png'
 import styles from './index.module.scss'
 import BorderedButton from "../../Common/Buttons/BorderedButton";
 import FullButton from "../../Common/Buttons/FullButton";
@@ -32,11 +30,10 @@ export default function Home() {
           <FullButton onClick={() => navigate('/aboutMe')} title='About Me' marginRight={'1.5rem'}/>
         </div>
         <div className="flex items-center pt-9">
-          <span className="responsive_subTitle text-[#323232] font-display font-medium
-          text-3xl pr-5" id={styles.contact_me_text}>Contact me via: </span>
-          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer h-6 mr-4`}/>
+          <span className="text-xl text-[#323232] font-display font-medium pr-3" id={styles.contact_me_text}>Contact me via: </span>
+          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer h-4 mr-4`}/>
           <a href="https://github.com/antonm7" target="_blank">
-            <img src={github} className={`${styles.icon} h-7 cursor-pointer mr-7`}/>
+            <img src={github} loading="lazy" className={`${styles.icon} h-5 cursor-pointer mr-7`}/>
           </a>
         </div>
     </Layout>

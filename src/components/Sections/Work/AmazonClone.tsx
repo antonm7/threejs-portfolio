@@ -7,10 +7,10 @@ import FullButton from "../../Common/Buttons/FullButton";
 import Layout from "../../Layout";
 import styles from './index.module.scss';
 import Main from '/projects/amazonShop.png';
-import Checkout from '/projects/amazonClone/checkout.png';
-import Item from '/projects/amazonClone/item.png';
-import Complete from '/projects/amazonClone/complete.png';
-import ScrollToTop from "../../../helpers/scrollToTop";
+import Checkout from '/projects/amazonClone/checkout.webp';
+import Item from '/projects/amazonClone/item.webp';
+import Complete from '/projects/amazonClone/complete.webp';
+import { Suspense } from "react";
  
 export default function AmazonClone() {
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ export default function AmazonClone() {
             <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
                 Amazon shop clone, with the popular features for e-commerce site.<br />               
             </p>
-            <p className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
+            <div className="responsive_para max-w-3xl text-[#323232] font-display text-3xl pt-6 leading-relaxed">
                 Some features this website includes: <br />
                 <ul className="pl-2 pt-2">
                     <li className="pt-4"><span className="underline"> Register and login authentication</span> - created with NextAuth (now called Auth.js)</li>
@@ -30,7 +30,7 @@ export default function AmazonClone() {
                     <li className="pt-4"><span className="underline">Filter Products</span> - users are able to filter by categories, and search by name products.</li>
                     <li className="pt-4"><span className="underline">Add To Cart And Wishlist</span> - users can add to cart their products, or add to whislist.</li>
                 </ul>
-            </p>
+            </div>
             <h2 className="responsive_subTitle pt-16 text-black font-integral font-bold text-4xl">TECH:</h2>
             <div className="flex flex-wrap items-center pt-8">
                 <ColorBox title={"T3-Stack"} color={"#D14AB9"} bgColor="pink" />
@@ -45,7 +45,7 @@ export default function AmazonClone() {
             </div>
             <div className={`w-full table ${styles.table_wrapper}`}>
                 <div className="w-2/4 float-left pr-2">
-                    <img src={Main} className="w-full"/>
+                    <img placeholder="ree" src={Main} className="w-full"/>
                 </div>
                 <div className="w-2/4 float-right">
                     <img src={Checkout} className="w-full"/>

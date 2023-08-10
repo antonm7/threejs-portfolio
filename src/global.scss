@@ -6,38 +6,28 @@
 $primary-color: white;
 
 
-@font-face {
-    font-family: SF Pro Display;
-    src: url('../public/fonts/bold.otf');
-    font-weight: 700;
-}
-@font-face {
-    font-family: SF Pro Display;
-    src: url('../public/fonts/regular.otf');
-    font-weight: 400;
-}
 
 @font-face {
     font-family: SF Pro Display;
-    src: url('../public/fonts/medium.otf');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Integral CF;
-    src: url('../public/fonts/IntegralCF-Regular.otf');
+    src: url('../fonts/regular.otf');
     font-weight: 400;
 }
 
 @font-face {
     font-family: Integral CF;
-    src: url('../public/fonts/IntegralCF-Medium.otf');
+    src: url('../fonts/IntegralCF-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Integral CF;
+    src: url('../fonts/IntegralCF-Medium.otf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: Integral CF;
-    src: url('../public/fonts/IntegralCF-Bold.otf');
+    src: url('../fonts/IntegralCF-Bold.otf');
     font-weight: 700;
 }
 

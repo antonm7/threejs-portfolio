@@ -21,6 +21,16 @@ import Model from "./components/Model";
 import Loader from "react-loaders";
 import useWidth from "./helpers/useWindowSize";
 import AmazonClone from "./components/Sections/Work/AmazonClone";
+import React, { Suspense } from "react";
+
+const LazyAboutMe = React.lazy(() => import('./components/Sections/AboutMe')) 
+const LazyPortfolio = React.lazy(() => import('./components/Sections/Portfolio')) 
+const LazyPoetry = React.lazy(() => import('./components/Sections/Work/Poetry')) 
+const LazyMagic = React.lazy(() => import('./components/Sections/Work/Magic')) 
+const LazyLandify = React.lazy(() => import('./components/Sections/Work/Landify')) 
+const LazyKeeper = React.lazy(() => import('./components/Sections/Work/Keeper')) 
+const LazyGameFevr = React.lazy(() => import('./components/Sections/Work/GameFevr')) 
+const LazyAmazonClone = React.lazy(() => import('./components/Sections/Work/AmazonClone')) 
 
 function App() {
   const emailVisibility = useStore(state => state.email)
@@ -42,15 +52,49 @@ function App() {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/aboutMe" element={<AboutMe />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/project/poetry" element={<Poetry />} />
-                <Route path="/project/magicEditor" element={<Magic />} />
-                <Route path="/project/landify" element={<Landify />} />
-                <Route path="/project/keeper" element={<Keeper />} />
-                <Route path="/project/gameFevr" element={<GameFevr />} />
-                <Route path="/project/amazonClone" element={<AmazonClone />} />
+                <Route path="/aboutMe" 
+                  element={
+                  <Suspense>
+                    <LazyAboutMe />
+                  </Suspense>} 
+                />
+                <Route path="/portfolio" element={
+                  <Suspense>
+                    <LazyPortfolio />
+                  </Suspense>
+                } />
+                <Route path="/project/poetry" element={
+                  <Suspense>
+                    <LazyPoetry />
+                  </Suspense>
+                }  />
+                <Route path="/project/magicEditor" element={
+                  <Suspense>
+                    <LazyMagic />
+                  </Suspense>
+                }  />
+                <Route path="/project/landify" element={
+                  <Suspense>
+                    <LazyLandify />
+                  </Suspense>
+                }  />
+                <Route path="/project/keeper" element={
+                  <Suspense>
+                    <LazyKeeper />
+                  </Suspense>
+                } />
+                <Route path="/project/gameFevr" element={
+                  <Suspense>
+                    <LazyGameFevr />
+                  </Suspense>
+                } />
+                <Route path="/project/amazonClone" element={
+                  <Suspense>
+                    <LazyAmazonClone />
+                  </Suspense>
+                }  />
                 <Route path="/project/auth" element={<Auth />} /> 
+                <Route path="/*" element={<Home />} /> 
               </Routes>
             </BrowserRouter>
             <Canvas id={styles.canvas} className={`h-auto`} shadows 
@@ -71,15 +115,49 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/project/poetry" element={<Poetry />} />
-            <Route path="/project/magicEditor" element={<Magic />} />
-            <Route path="/project/landify" element={<Landify />} />
-            <Route path="/project/keeper" element={<Keeper />} />
-            <Route path="/project/gameFevr" element={<GameFevr />} />
-            <Route path="/project/amazonClone" element={<AmazonClone />} />
+            <Route path="/aboutMe" 
+              element={
+              <Suspense>
+                <LazyAboutMe />
+              </Suspense>} 
+            />
+             <Route path="/portfolio" element={
+                <Suspense>
+                  <LazyPortfolio />
+                </Suspense>
+              } />
+             <Route path="/project/poetry" element={
+                <Suspense>
+                  <LazyPoetry />
+                </Suspense>
+              }  />
+             <Route path="/project/magicEditor" element={
+                <Suspense>
+                  <LazyMagic />
+                </Suspense>
+              }  />
+             <Route path="/project/landify" element={
+                <Suspense>
+                  <LazyLandify />
+                </Suspense>
+              }  />
+            <Route path="/project/keeper" element={
+                <Suspense>
+                  <LazyKeeper />
+                </Suspense>
+              } />
+             <Route path="/project/gameFevr" element={
+                <Suspense>
+                  <LazyGameFevr />
+                </Suspense>
+              } />
+             <Route path="/project/amazonClone" element={
+                <Suspense>
+                  <LazyAmazonClone />
+                </Suspense>
+              }  />
             <Route path="/project/auth" element={<Auth />} />
+            <Route path="/*" element={<Home />} /> 
           </Routes>
         </BrowserRouter>
       </>

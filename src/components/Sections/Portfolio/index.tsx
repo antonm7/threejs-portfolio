@@ -34,6 +34,10 @@ export default function Portfolio() {
         setCurrent(0)
     },[store.section])
 
+    useEffect(() => {
+        setCurrent(0)
+    },[])
+
     return (
         <Layout>
             <FontAwesomeIcon onClick={() => navigate('/')} icon={faArrowLeft} className="z-50 w-6 h-6"/>

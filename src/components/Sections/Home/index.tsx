@@ -31,9 +31,9 @@ export default function Home() {
         </div>
         <div className="flex items-center pt-9">
           <span className="text-xl text-[#323232] font-display font-medium pr-3" id={styles.contact_me_text}>Contact me via: </span>
-          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} cursor-pointer h-4 mr-4`}/>
+          <img onClick={() => setEmail(true)} src={email} className={`${styles.icon} unselectable cursor-pointer h-4 mr-4 unselectable`}/>
           <a href="https://github.com/antonm7" target="_blank">
-            <img src={github} loading="lazy" className={`${styles.icon} h-5 cursor-pointer mr-7`}/>
+            <img src={github} loading="lazy" className={`${styles.icon} h-5 cursor-pointer mr-7 unselectable`}/>
           </a>
         </div>
     </Layout>

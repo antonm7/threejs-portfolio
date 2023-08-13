@@ -81,7 +81,9 @@ export default function Portfolio() {
                     </Slider>
                 }
                 <div className="flex justify-center mt-4">
-                    <img src={left} onClick={() => current === 0 ? null : slickSlider.current.slickPrev()} className={`${current === 0 ? 'opacity-30' : 'opacity-100'} h-12 mr-2`}/>
+                    <img src={left} 
+                    onClick={() => current === 0 ? null : slickSlider.current.slickPrev()} 
+                    className={`${current === 0 ? 'opacity-30' : 'opacity-100'} h-12 mr-2 unselectable`} />
                     <img src={right} onClick={() => {
                         if(store.section === 'landing') {
                             current === LANDING_LENGTH - 1 ? null : slickSlider.current.slickNext()
@@ -94,7 +96,7 @@ export default function Portfolio() {
                     }} 
                     className={`${current === (store.section === 'landing'
                      ? LANDING_LENGTH : store.section === 'fullstack' ?
-                    FULLSTACK_LENGTH : BACKEND_LENGTH) - 1 ? 'opacity-30' : 'opacity-100'} h-12`}/>
+                    FULLSTACK_LENGTH : BACKEND_LENGTH) - 1 ? 'opacity-30' : 'opacity-100'} unselectable h-12`}/>
                 </div>
             </div>
         </Layout>

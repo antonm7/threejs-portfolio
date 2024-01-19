@@ -30,6 +30,10 @@
             background-position: top left;
         }
     }
+    @include for-size(phone-only) {
+        height: 100vh;
+        max-height: 100vh;
+    }
 }
 #width_container {
     top: 50%;
@@ -46,6 +50,11 @@
         transform: translateX(-50%);
         width: 95vw;
     }
+    @include for-size(phone-only) {
+        position: relative;
+        width: 100vw;
+        padding: 0;
+    }
     @include for-size(small-phone) {
         width: 100vw;
         position: relative;
@@ -53,6 +62,7 @@
 }
 
 #small_wrapper {
+    height: 100vh;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.85);
     &::-webkit-scrollbar {

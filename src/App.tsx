@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber"
 import {
   BrowserRouter,
   Route,
+  Router,
   Routes,
 } from "react-router-dom";
 import styles from './app.module.scss';
@@ -20,11 +21,8 @@ import {useProgress} from '@react-three/drei'
 import Model from "./components/Model";
 import Loader from "react-loaders";
 import useWidth from "./helpers/useWindowSize";
-import AmazonClone from "./components/Sections/Work/AmazonClone";
 import React, { Suspense } from "react";
 
-const LazyAboutMe = React.lazy(() => import('./components/Sections/AboutMe')) 
-const LazyPortfolio = React.lazy(() => import('./components/Sections/Portfolio')) 
 const LazyPoetry = React.lazy(() => import('./components/Sections/Work/Poetry')) 
 const LazyMagic = React.lazy(() => import('./components/Sections/Work/Magic')) 
 const LazyLandify = React.lazy(() => import('./components/Sections/Work/Landify')) 
@@ -54,14 +52,12 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/aboutMe" 
                   element={
-                  <Suspense>
-                    <LazyAboutMe />
-                  </Suspense>} 
-                />
+                  <AboutMe />
+             
+                  }
+                  />
                 <Route path="/portfolio" element={
-                  <Suspense>
-                    <LazyPortfolio />
-                  </Suspense>
+                    <Portfolio/>
                 } />
                 <Route path="/project/poetry" element={
                   <Suspense>
@@ -96,15 +92,15 @@ function App() {
                 <Route path="/project/auth" element={<Auth />} /> 
                 <Route path="/*" element={<Home />} /> 
               </Routes>
+              <Canvas id={styles.canvas} className={`h-auto`} shadows 
+                camera={{
+                  fov:45,
+                  near:0.1,
+                  far:2000
+                }}>
+                  <Model />
+              </Canvas>
             </BrowserRouter>
-            <Canvas id={styles.canvas} className={`h-auto`} shadows 
-              camera={{
-                fov:45,
-                near:0.1,
-                far:2000
-              }}>
-                <Model />
-            </Canvas>
         </div>
       )
     
@@ -116,15 +112,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutMe" 
-              element={
-              <Suspense>
-                <LazyAboutMe />
-              </Suspense>} 
-            />
+                  element={
+                  <AboutMe />
+                  } />
              <Route path="/portfolio" element={
-                <Suspense>
-                  <LazyPortfolio />
-                </Suspense>
+                  <Portfolio />
               } />
              <Route path="/project/poetry" element={
                 <Suspense>

@@ -2,11 +2,14 @@ import { PresentationControls } from '@react-three/drei'
 import { useRef } from 'react'
 import Setup from './Setup'
 import useWidth from '../helpers/useWindowSize'
+import React from 'react'
 
-export default function Model() {
+function Model() {
     const lightRef = useRef<any>(null)
     const modelRef = useRef<any>(null)
     const width = useWidth()
+
+    console.log('re-rendered')
 
     return (
         <>
@@ -25,3 +28,5 @@ export default function Model() {
         </>
     )
 }
+
+export default React.memo(Model)

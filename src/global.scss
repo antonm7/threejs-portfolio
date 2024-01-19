@@ -5,6 +5,10 @@
 @import './responsive.scss';
 $primary-color: white;
 
+html {
+    background-color:#B0C6D0;
+}
+
 @font-face {
     font-family: SF Pro Display;
     src: url('../fonts/regular.otf');
@@ -65,14 +69,6 @@ $primary-color: white;
     content: 'Anton.';
     top: -5px;
     left: 8px;
-}
-
-canvas {
-    width: 50%;
-    background-color:#B0C6D0;
-    @include for-size(tablet-portrait) {
-        background-color:#B3C8D1;
-    }
 }
 
 .slick-slide>div {padding: 0 5px;}

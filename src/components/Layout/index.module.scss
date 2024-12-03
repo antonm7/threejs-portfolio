@@ -1,89 +1,92 @@
-@import '../../responsive.scss';
+@import "../../responsive.scss";
 
 #wrapper {
-    background-color: rgba(255, 255, 255, 0.85);
-    max-height: 95vh;
+  background-color: rgba(255, 255, 255, 0.85);
+  max-height: 95vh;
+  @include for-size(tablet-portrait) {
+    padding: 1.5rem;
+    height: min-content;
+    min-height: min-content;
+    overflow: auto;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::before {
+    content: "";
+    background-image: url("/assets/bg/aboutMe.webp");
+    background-size: 100%;
+    background-position: center left;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.22;
+    z-index: 1;
+    pointer-events: none;
     @include for-size(tablet-portrait) {
-        padding: 1.5rem;
-        height: min-content;
-        min-height: min-content;
-        overflow: auto;
+      background-position: top left;
     }
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-    &::before {
-        content: "";
-        background-image: url('/assets/bg/aboutMe.webp');
-        background-size: 100%;
-        background-position:center left;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 0.22;
-        z-index: 1;
-        pointer-events: none;
-        @include for-size(tablet-portrait) {
-            background-position: top left;
-        }
-    }
-    @include for-size(phone-only) {
-        height: 100vh;
-        max-height: 100vh;
-    }
+  }
+  @include for-size(phone-only) {
+    height: 100vh;
+    max-height: 100vh;
+  }
 }
+
 #width_container {
-    top: 50%;
-    transform: translateY(-50%);
-    @include for-size(big-desktop) {
-        width: 45vw !important;
-    }
-    @include for-size(tablet-landscape) {
-        width: 72vw;
-    }
-    @include for-size(tablet-portrait) {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 95vw;
-    }
-    @include for-size(phone-only) {
-        position: relative;
-        width: 100vw;
-        padding: 0;
-    }
-    @include for-size(small-phone) {
-        width: 100vw;
-        position: relative;
-    }   
+  top: 50%;
+  transform: translateY(-50%);
+  @include for-size(big-desktop) {
+    width: 45vw !important;
+  }
+  @include for-size(tablet-landscape) {
+    width: 72vw;
+  }
+  @include for-size(tablet-portrait) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+  }
+  @include for-size(phone-only) {
+    position: relative;
+    width: 100vw;
+    padding: 0;
+  }
+  @include for-size(small-phone) {
+    width: 100vw;
+    position: relative;
+  }
 }
 
 #small_wrapper {
-    height: 100vh;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.85);
-    &::-webkit-scrollbar {
-        width: 0;
+  height: 100vh;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::before {
+    content: "";
+    background-image: url("/assets/bg/aboutMe.webp");
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: -32px;
+    opacity: 0.22;
+    z-index: 1;
+    pointer-events: none;
+    @include for-size(tablet-portrait) {
+      background-position: top left;
     }
-    &::before {
-        content: "";
-        background-image: url('/assets/bg/aboutMe.webp');
-        background-size: cover;
-        background-position:center left;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: -32px;
-        opacity: 0.22;
-        z-index: 1;
-        pointer-events: none;
-        @include for-size(tablet-portrait) {
-            background-position: top left;
-        }
-    }
+  }
 }

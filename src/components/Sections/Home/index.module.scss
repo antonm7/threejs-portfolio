@@ -1,27 +1,33 @@
-@import '../../../responsive.scss';
+@import "../../../responsive.scss";
 
 #buttons_wrapper {
-    @include for-size(phone-only) {
-        flex-wrap: wrap;
-        button {
-            &:nth-child(1) {
-                margin-bottom: 1rem;
-            }
-        }
+  @include for-size(phone-only) {
+    flex-wrap: wrap;
+    button {
+      &:nth-child(1) {
+        margin-bottom: 1rem;
+      }
     }
+  }
 }
 
 .icon {
-    &:hover {
-        scale: 1.1;
-    }
-    @include for-size(small-phone) {
-        margin-right: 1rem !important;
-    }
+  &:hover {
+    scale: 1.1;
+  }
+  @include for-size(small-phone) {
+    margin-right: 1rem !important;
+  }
 }
 
 #contact_me_text {
-    @include for-size(small-phone) {
-        font-size: 1.1rem;
-    }
+  @include for-size(small-phone) {
+    font-size: 1.1rem;
+  }
+}
+
+#prject_holder {
+  @include for-size(tablet-landscape) {
+    justify-content: center;
+  }
 }

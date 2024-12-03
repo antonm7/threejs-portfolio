@@ -9,8 +9,6 @@ function Model() {
   const modelRef = useRef<any>(null);
   const width = useWidth();
 
-  console.log("re-rendered");
-
   return (
     <>
       <ambientLight color={"white"} intensity={0.5} />

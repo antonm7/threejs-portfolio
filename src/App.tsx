@@ -54,8 +54,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            {/* <Route path="/aboutMe" element={<AboutMe />} /> */}
+            {/* <Route path="/portfolio" element={<Portfolio />} /> */}
             <Route
               path="/project/poetry"
               element={
@@ -96,14 +96,14 @@ function App() {
                 </Suspense>
               }
             />
-            <Route
+            {/* <Route
               path="/project/amazonClone"
               element={
                 <Suspense>
                   <LazyAmazonClone />
                 </Suspense>
               }
-            />
+            /> */}
             <Route path="/project/auth" element={<Auth />} />
             <Route path="/*" element={<Home />} />
           </Routes>
@@ -129,8 +129,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/aboutMe" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            {/* <Route path="/aboutMe" element={<AboutMe />} /> */}
+            {/* <Route path="/portfolio" element={<Portfolio />} /> */}
             <Route
               path="/project/poetry"
               element={
